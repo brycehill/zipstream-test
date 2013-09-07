@@ -1,0 +1,16 @@
+<div class='main pane'>
+  <h2>Upload a File</h2>
+  <form id='uploadForm' method='post' action='/upload' enctype='multipart/form-data'>
+    <input type='file' id='file-picker' name='uploadedFile' />
+    <input type='submit' id='upload-btn' value='Upload' />
+  </form>
+</div>
+<div class='files pane'>
+  <h2>Uploaded Files:</h2>
+  <ul>
+  {{#each files}}
+    <li>{{name}}  <span class='size'>{{size}} bytes</span></li>
+  {{/each}}
+  </ul>
+  <a href='zip' id='download-zip'>Download a zip of these files</a>
+</div>
